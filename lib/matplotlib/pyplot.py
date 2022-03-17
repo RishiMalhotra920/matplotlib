@@ -391,7 +391,7 @@ def show(*args, **kwargs):
     explicitly there.
     """
 #     save the figure if someone does plt.show()
-    return savefig("aaabcd.pdf")
+    return savefig("matplotlib_output.png", dpi=100)
 # original code
     _warn_if_gui_out_of_main_thread()
     return _get_backend_mod().show(*args, **kwargs)
