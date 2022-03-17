@@ -390,6 +390,9 @@ def show(*args, **kwargs):
     the end of every cell by default. Thus, you usually don't have to call it
     explicitly there.
     """
+#     save the figure if someone does plt.show()
+    return savefig("aaabcd.pdf")
+# original code
     _warn_if_gui_out_of_main_thread()
     return _get_backend_mod().show(*args, **kwargs)
 
