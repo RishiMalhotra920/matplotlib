@@ -977,6 +977,7 @@ def draw():
 @_copy_docstring_and_deprecators(Figure.savefig)
 def savefig(*args, **kwargs):
     fig = gcf()
+    print(*args)
     res = fig.savefig(*args, **kwargs)
     fig.canvas.draw_idle()  # Need this if 'transparent=True', to reset colors.
     return res
